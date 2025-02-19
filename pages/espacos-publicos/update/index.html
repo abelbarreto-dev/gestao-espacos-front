@@ -18,38 +18,43 @@
     <div class="row">
         <div class="col"></div>
         <div class="col">
-            <h1>Gerenciando Espaços Públicos</h1>
-            <p>
-                <input type="button" value="Novo Espaço Público" class="btn btn-success btn-lg" onclick="window.location.href='/pages/espacos-publicos/new'">
-            </p>
-            <p>
-                <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Descrição</th>
-                        <th>Endereço</th>
-                        <th>Disponibilidade</th>
-                        <th>Capacidade</th>
-                        <th>Editar</th>
-                        <th>Excluir</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                    </tr>
-                </table>
-            </p>
+            <h1>Atualizando Espaço Público Existente</h1>
+            <form action="" method="post">
+                <p>
+                    Nome *
+                </p>
+                <p>
+                    <input type="text" name="NomeEspaco" id="NomeEspaco" required>
+                </p>
+
+                <p>
+                    Descrição
+                </p>
+                <p>
+                    <input type="text" name="DescricaoEspaco" id="DescricaoEspaco">
+                </p>
+
+                <p>
+                    Endereço *
+                </p>
+                <p>
+                    <input type="text" name="EnderecoEspaco" id="EnderecoEspaco" required>
+                </p>
+
+                <p>
+                    Capacidade *
+                </p>
+                <p>
+                    <input type="number" name="CapacidadeEspaco" id="CapacidadeEspaco" required>
+                </p>
+
+                <p>
+                    <input type="submit" value="Atualizar" class="btn btn-danger">
+                </p>
+            </form>
         </div>
         <div class="col"></div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
