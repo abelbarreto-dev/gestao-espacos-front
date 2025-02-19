@@ -18,31 +18,52 @@
     <div class="row">
         <div class="col"></div>
         <div class="col">
+            <h1>Atualizar Solicitação Existente</h1>
+
             <form action="" method="post">
-                <h1>Novo Cadastro Sistema de Gerenciamento de Ocupação de Espaços Públicos</h1>
-                <p></p>
                 <p>
-                    <caption>Digite Seu Nome *:</caption>
-                    <input type="text" name="CadastroNome" id="CadastroNome">
+                    Selecione Espaço Público
                 </p>
                 <p>
-                    <caption>Digite Seu Email *:</caption>
-                    <input type="text" name="CadastroEmail" id="CadastroEmail">
-                </p>
-                <p>
-                    <caption>Digite Sua Senha *:</caption>
-                    <input type="password" name="CadastroSenha" id="CadastroSenha">
-                </p>
-                <p>
-                    <caption>Tipo de Usuário *:</caption>
-                    <select name="" id="">
-                        <option value="solicitante">Solicitante</option>
-                        <option value="administrador">Administrador</option>
+                    <select name="SelectEpacoPublico" id="SelectEspacoPublico">
+                        <option value="option 1">Opção 1</option>
                     </select>
                 </p>
+
                 <p>
-                    <input type="submit" value="Cadastrar" class="btn btn-success font-bold">
+                    Tipo de Evento
                 </p>
+                <p>
+                    <select name="SelectTipoEvento" id="SelectTipoEvento">
+                        <option value="option 1">Opção 1</option>
+                    </select>
+                </p>
+
+                <p>
+                    Solicitante
+                </p>
+                <p>
+                    <select name="SelectTipoEvento" id="SelectTipoEvento">
+                        <option value="option 1">Opção 1</option>
+                    </select>
+                </p>
+
+                <p>
+                    Data de Inicio
+                </p>
+                <p>
+                    <input type="datetime-local" name="DataInicio" id="DataInicio">
+                </p>
+
+                <p>
+                    Data de Fim
+                </p>
+                <p>
+                    <input type="datetime-local" name="PeriodoDataFim" id="PeriodoDataFim">
+                </p>
+
+                <input type="submit" value="Enviar Solicitação" class="btn btn-success btn-lg">
+
             </form>
         </div>
         <div class="col"></div>
