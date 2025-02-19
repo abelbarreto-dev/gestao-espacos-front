@@ -24,7 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             if (data.success) {
                 alert("Login realizado com sucesso!");
-                window.location.href = "/dashboard"; // Redireciona após login bem-sucedido
+
+                // Redireciona após login bem-sucedido
+                if (data.perfil === "administrador") {
+                    window.location.href = "/pages/admin-dashboard";
+                }
+                else if (data.perfil === "solicitante") {
+                    window.location.href = "/pages/solicitante-dashboard";
+                }
             } else {
                 alert("Erro no login. Verifique suas credenciais.");
             }
