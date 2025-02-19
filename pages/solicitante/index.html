@@ -18,52 +18,31 @@
     <div class="row">
         <div class="col"></div>
         <div class="col">
-            <h1>Cadastrar Nova Solicitação</h1>
-
             <form action="" method="post">
+                <h1>Cadastrar Novo Solicitante</h1>
+                <p></p>
                 <p>
-                    Selecione Espaço Público
+                    <caption>Digite Seu Nome *:</caption>
+                    <input type="text" name="CadastroNome" id="CadastroNome">
                 </p>
                 <p>
-                    <select name="SelectEpacoPublico" id="SelectEspacoPublico">
-                        <option value="option 1">Opção 1</option>
+                    <caption>Tipo de Documento *:</caption>
+                    <select name="" id="">
+                        <option value="pessoa física">Pessoa Física</option>
+                        <option value="pessoa jurídica">Pessoa Jurídica</option>
                     </select>
                 </p>
-
                 <p>
-                    Tipo de Evento
+                    <caption>Digite Seu Documento *:</caption>
+                    <input type="text" name="CadastroEmail" id="CadastroEmail">
                 </p>
                 <p>
-                    <select name="SelectTipoEvento" id="SelectTipoEvento">
-                        <option value="option 1">Opção 1</option>
-                    </select>
-                </p>
-
-                <p>
-                    Solicitante
+                    <caption>Digite Seu Contato *:</caption>
+                    <input type="text" name="CadastroEmail" id="CadastroEmail">
                 </p>
                 <p>
-                    <select name="SelectSolicitante" id="SelectSolicitante">
-                        <option value="option 1">Opção 1</option>
-                    </select>
+                    <input type="submit" value="Cadastrar" class="btn btn-success font-bold">
                 </p>
-
-                <p>
-                    Data de Inicio
-                </p>
-                <p>
-                    <input type="datetime-local" name="DataInicio" id="DataInicio">
-                </p>
-
-                <p>
-                    Data de Fim
-                </p>
-                <p>
-                    <input type="datetime-local" name="PeriodoDataFim" id="PeriodoDataFim">
-                </p>
-
-                <input type="submit" value="Enviar Solicitação" class="btn btn-success btn-lg">
-
             </form>
         </div>
         <div class="col"></div>
