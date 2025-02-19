@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
             senha: senha
         };
 
+        const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/usuarios/login";
+
         // Envia os dados para a API de login
-        fetch("https://suaapi.com/login", {
+        fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

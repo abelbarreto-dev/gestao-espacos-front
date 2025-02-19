@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/usuarios"
 
         // Envia os dados para a API
-        fetch("https://suaapi.com/cadastro", {
+        fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
