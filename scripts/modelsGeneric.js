@@ -1,5 +1,8 @@
 export const solicitacaoPendente = {
-    id_solicitacao: 0,
+    solicitacao: {
+        id_solicitacao: 0,
+        data_solicitacao: "datetime"
+    },
     espaco_publico: {
         id_espaco: 0,
         nome: ""
