@@ -21,7 +21,7 @@ export const periodoResponse = {
     data_fim: "datetime"
 };
 
-export const SolicitacaoResponse = {
+export const solicitacaoResponse = {
     id_solicitacao: 0,
     id_solicitante: 0,
     id_usuario: 0,
