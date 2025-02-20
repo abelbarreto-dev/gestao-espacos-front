@@ -40,7 +40,7 @@ async function getAllEspacosPublicos() {
 
     const allEspPub = await fetch(url);
 
-    console.log(allEspPub.data);
+    console.log(allEspPub);
 
     if (!allEspPub || !allEspPub.data) {
         alert("Nenhum Espaço Público Cadastrado!");
