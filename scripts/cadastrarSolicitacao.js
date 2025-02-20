@@ -38,7 +38,8 @@ function createNewPeriodo(solicitacaoId) {
 async function getAllEspacosPublicos() {
     const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos";
 
-    const allEspPub = await fetch(url);
+    const response = await fetch(url);
+    const allEspPub = await response.json();
 
     if (!allEspPub || !allEspPub.data) {
         alert("Nenhum Espaço Público Cadastrado!");
@@ -52,7 +53,8 @@ async function getAllEspacosPublicos() {
 async function getAllTiposEventos() {
     const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/tipo-evento";
 
-    const allTipoEvento = await fetch(url);
+    const response = await fetch(url);
+    const allTipoEvento = await response.json();
 
     if (!allTipoEvento || !allTipoEvento.data) {
         alert("Nenhum Tipo Evento Cadastrado!");
@@ -66,7 +68,8 @@ async function getAllTiposEventos() {
 async function getAllSolicitantes() {
     const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitantes";
 
-    const allSolicitantes = await fetch(url);
+    const response = await fetch(url);
+    const allSolicitantes = await response.json();
 
     if (!allSolicitantes || !allSolicitantes.data) {
         alert("Nenhum Solicitante Cadastrado!");
