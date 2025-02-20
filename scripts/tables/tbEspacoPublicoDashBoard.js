@@ -29,8 +29,6 @@ function cancelarSolicitacao(id) {
 function tbEspacoPublicoDashBoard(data) {
     const tableBody = document.getElementById("TbEspacoPublicoDashBoard");
 
-    tableBody.textContent = "";
-
     data.forEach(espaco => {
         const row = document.createElement("tr");
 
