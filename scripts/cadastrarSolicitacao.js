@@ -79,7 +79,7 @@ function getAllSolicitantes() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    try {
+    /*try {
         if (!UserStore.getInstance().id_usuario) {
             throw Error("user not found");
         }
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     catch (error) {
         window.location.href = "/pages/solicitante-dashboard";
         return;
-    }
+    }*/
 
     document.querySelector("form").addEventListener("submit", function(event) {
         event.preventDefault();
