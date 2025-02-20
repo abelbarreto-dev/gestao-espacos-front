@@ -78,18 +78,22 @@ async function getAllSolicitantes() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
+async function fillDataSelects() {
     try {
-        getAllEspacosPublicos();
-        getAllTiposEventos();
-        getAllSolicitantes();
+        await getAllEspacosPublicos();
+        await getAllTiposEventos();
+        await getAllSolicitantes();
     }
     catch (error) {
         console.error(error);
         //window.location.href = "/pages/solicitante-dashboard";
         return;
     }
+}
 
+document.addEventListener("DOMContentLoaded", fillDataSelects);
+
+document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("form").addEventListener("submit", function(event) {
         event.preventDefault();
 
