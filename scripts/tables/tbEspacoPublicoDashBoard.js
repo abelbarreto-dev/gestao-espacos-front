@@ -28,13 +28,7 @@ function cancelarSolicitacao(id) {
 
 function tbEspacoPublicoDashBoard(data) {
     const tableBody = document.getElementById("TbEspacoPublicoDashBoard");
-    // tableBody.innerHTML = "";
-
-    if (tableBody) {
-        tableBody.innerHTML = "";
-    } else {
-        console.error("Tabela não encontrada!");
-    }
+    tableBody.innerHTML = "";
 
     data.forEach(espaco => {
         tableBody.innerHTML += `<tr>
