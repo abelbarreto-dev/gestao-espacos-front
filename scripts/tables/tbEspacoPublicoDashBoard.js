@@ -38,7 +38,7 @@ function tbEspacoPublicoDashBoard(data) {
             <td>${espaco.endereco}</td>
             <td>${espaco.disponibilidade}</td>
             <td>${espaco.descricao}</td>
-            <td><a href="#" onclick="window.location.href='/pages/espacos-publicos'">Editar</a></td>
+            <td><a href="#" onclick="window.location.href='/pages/espacos-publicos/update'">Editar</a></td>
             <td><a href="#" onclick="cancelarSolicitacao(${espaco.id_espaco})">Excluir</a></td>
         </tr>`;
     });
