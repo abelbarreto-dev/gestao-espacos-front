@@ -49,9 +49,9 @@ function tbEspacoPublicoDashBoard(data) {
     });
 }
 
-function fetchDataAll() {
+async function fetchDataAll() {
     try {
-        const response = fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos");
+        const response = await fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos");
 
         const dataEspPub = response.json();
         tbEspacoPublicoDashBoard(dataEspPub);
