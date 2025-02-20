@@ -29,7 +29,7 @@ function cancelarSolicitacao(id) {
 function tbEspacoPublicoDashBoard(data) {
     const tableBody = document.getElementById("TbEspacoPublicoDashBoard");
 
-    data.foreach(espaco => {
+    data.forEach(espaco => {
         const row = document.createElement("tr");
 
         row.innerHTML = `<tr>
@@ -51,7 +51,7 @@ async function fetchDataAll() {
 
         const dataEspPub = await response.json();
 
-        tbEspacoPublicoDashBoard(dataEspPub);
+        tbEspacoPublicoDashBoard(dataEspPub.data);
     } catch (error) {
         console.error("Erro ao buscar dados: ", error);
     }
