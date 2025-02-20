@@ -6,6 +6,8 @@ function tbSolicitacaoAdminDashBoard(data) {
     data.forEach(solicitacao => {
         const row = document.createElement("tr");
 
+        row.innerHTML = "";
+
         row.innerHTML = `
             <tr>${solicitacao.id_solicitacao}</tr>
             <tr>${solicitacao.id_solicitante}</tr>
