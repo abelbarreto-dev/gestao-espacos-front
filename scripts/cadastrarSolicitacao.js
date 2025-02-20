@@ -35,12 +35,12 @@ function createNewPeriodo(solicitacaoId) {
 }
 /** periodo */
 
-function getAllEspacosPublicos() {
+async function getAllEspacosPublicos() {
     const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos";
 
-    const allEspPub = fetch(url);
+    const allEspPub = await fetch(url);
 
-    if (!allEspPub) {
+    if (!allEspPub || !allEspPub.data) {
         alert("Nenhum Espaço Público Cadastrado!");
 
         throw Error("error espaco publico");
@@ -49,12 +49,12 @@ function getAllEspacosPublicos() {
     populateSelectEspacoPublico(allEspPub.data);
 }
 
-function getAllTiposEventos() {
+async function getAllTiposEventos() {
     const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/tipo-evento";
 
-    const allTipoEvento = fetch(url);
+    const allTipoEvento = await fetch(url);
 
-    if (!allTipoEvento) {
+    if (!allTipoEvento || !allTipoEvento.data) {
         alert("Nenhum Tipo Evento Cadastrado!");
 
         throw Error("error tipo evento");
@@ -63,12 +63,12 @@ function getAllTiposEventos() {
     populateSelectTipoEvento(allTipoEvento.data);
 }
 
-function getAllSolicitantes() {
+async function getAllSolicitantes() {
     const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitantes";
 
-    const allSolicitantes = fetch(url);
+    const allSolicitantes = await fetch(url);
 
-    if (!allSolicitantes) {
+    if (!allSolicitantes || !allSolicitantes.data) {
         alert("Nenhum Solicitante Cadastrado!");
 
         throw Error("error solicitante");
@@ -78,11 +78,11 @@ function getAllSolicitantes() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
     try {
-        getAllEspacosPublicos();
-        getAllTiposEventos();
-        getAllSolicitantes();
+        await getAllEspacosPublicos();
+        await getAllTiposEventos();
+        await getAllSolicitantes();
     }
     catch (error) {
         console.error(error);
