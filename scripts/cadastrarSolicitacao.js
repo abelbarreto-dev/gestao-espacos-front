@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            const idSolicitacao = data.data.id_solicitacao;
+            const idSolicitacao = data.id_solicitacao;
 
             const result = createNewPeriodo(idSolicitacao);
 
