@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
+            if (data.status === "success") {
                 alert("Login realizado com sucesso!");
 
                 // Redireciona após login bem-sucedido
