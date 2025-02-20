@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         // get data
-        const data = {
-            nome: document.getElementById("NomeEspaco").value,
-            descricao: document.getElementById("DescricaoEspaco").value,
-            endereco: document.getElementById("EnderecoEspaco").value,
-            capacidade: document.getElementById("CapacidadeEspaco").value
+        const dados = {
+            nome: document.getElementById("NomeEspacoCadastro").value,
+            descricao: document.getElementById("DescricaoEspacoCadastro").value,
+            endereco: document.getElementById("EnderecoEspacoCadastro").value,
+            capacidade: document.getElementById("CapacidadeEspacoCadastro").value
         };
 
         const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos";
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             alert("Cadastro realizado com sucesso!");
-            console.log("Sucesso:", data);
+            console.log("Sucesso:", dados);
 
             window.location.href = "/pages/espacos-publicos";
         })
