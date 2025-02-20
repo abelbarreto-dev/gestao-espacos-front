@@ -1,5 +1,5 @@
-import { usuarioResponse } from './models/modelsRequest';
-import UserStore from './singleton/userStore';
+import { usuarioResponse } from './models/modelsRequest.js';
+import UserStore from './singleton/userStore.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("form").addEventListener("submit", function (event) {
