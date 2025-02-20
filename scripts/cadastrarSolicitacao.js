@@ -40,8 +40,6 @@ async function getAllEspacosPublicos() {
 
     const allEspPub = await fetch(url);
 
-    console.log(allEspPub);
-
     if (!allEspPub || !allEspPub.data) {
         alert("Nenhum Espaço Público Cadastrado!");
 
@@ -80,11 +78,11 @@ async function getAllSolicitantes() {
 }
 
 
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
     try {
-        await getAllEspacosPublicos();
-        await getAllTiposEventos();
-        await getAllSolicitantes();
+        getAllEspacosPublicos();
+        getAllTiposEventos();
+        getAllSolicitantes();
     }
     catch (error) {
         console.error(error);
