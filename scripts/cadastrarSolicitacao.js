@@ -80,9 +80,6 @@ function getAllSolicitantes() {
 
 document.addEventListener("DOMContentLoaded", function () {
     try {
-        if (!UserStore.getInstance().id_usuario) {
-            throw Error("user not found");
-        }
         getAllEspacosPublicos();
         getAllTiposEventos();
         getAllSolicitantes();
