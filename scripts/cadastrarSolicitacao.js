@@ -119,7 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            const idSolicitacao = data.id_solicitacao;
+            alert("sucesso ao criar solicitacao");
+            /*const idSolicitacao = data.id_solicitacao;
 
             const result = createNewPeriodo(idSolicitacao);
 
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Sucesso!");
             } else {
                 alert("Problema com o período!");
-            }
+            }*/
         })
         .catch(error => {
             alert("Erro ao cadastrar. Tente novamente.");
