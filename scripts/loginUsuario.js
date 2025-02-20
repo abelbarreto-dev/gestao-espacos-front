@@ -28,13 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Login realizado com sucesso!");
 
                 // Redireciona após login bem-sucedido
-                if (data.perfil === "administrador") {
+                if (data.data.perfil === "administrador") {
                     window.location.href = "/pages/admin-dashboard";
                 }
-                else if (data.perfil === "solicitante") {
+                else if (data.data.perfil === "solicitante") {
                     window.location.href = "/pages/solicitante-dashboard";
-                } else {
-                    console.log("testando else : ", data.perfil);
                 }
             } else {
                 alert("Erro no login. Verifique suas credenciais.");
