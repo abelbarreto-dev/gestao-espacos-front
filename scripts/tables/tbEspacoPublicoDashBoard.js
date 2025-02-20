@@ -26,7 +26,7 @@ function cancelarSolicitacao(id) {
     }
 }
 
-export function tbEspacoPublicoDashBoard(data) {
+function tbEspacoPublicoDashBoard(data) {
     const tableBody = document.getElementById("TbEspacoPublicoDashBoard");
 
     tableBody.innerHTML = "";
