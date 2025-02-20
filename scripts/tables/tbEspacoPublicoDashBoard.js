@@ -34,8 +34,6 @@ function tbEspacoPublicoDashBoard(data) {
     data.forEach(espaco => {
         const row = document.createElement("tr");
 
-        row.textContent = "";
-
         row.innerHTML = `
             <tr>${espaco.id_espaco}</tr>
             <tr>${espaco.nome}</tr>
