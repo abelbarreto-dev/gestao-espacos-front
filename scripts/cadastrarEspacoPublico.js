@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
             capacidade: document.getElementById("CapacidadeEspacoCadastro").value
         };
 
+        console.log("dados: ", dados)
+
         const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos";
 
         // Envia os dados para a API
