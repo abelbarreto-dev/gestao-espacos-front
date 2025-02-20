@@ -35,13 +35,13 @@ function setTotalSolicitAprovadas() {
     }
 }
 
-function fetchData() {
+async function fetchData() {
     try {
-        const response = fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes");
+        const response = await fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes");
 
-        const espPub = fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos");
+        const espPub = await fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos");
 
-        const dataSolicicao = response.json();
+        const dataSolicicao = await response.json();
         tbSolicitacaoAdminDashBoard(dataSolicicao)
 
         const totalEspPub = espPub.length;

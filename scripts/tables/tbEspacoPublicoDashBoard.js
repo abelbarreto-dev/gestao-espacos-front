@@ -31,20 +31,20 @@ function tbEspacoPublicoDashBoard(data) {
 
     tableBody.innerHTML = "";
 
-    data.forEach(solicitacao => {
+    data.forEach(espaco => {
         const row = document.createElement("tr");
 
         row.innerHTML = "";
 
         row.innerHTML = `
-            <tr>${solicitacao.id_espaco}</tr>
-            <tr>${solicitacao.nome}</tr>
-            <tr>${solicitacao.descricao}</tr>
-            <tr>${solicitacao.endereco}</tr>
-            <tr>${solicitacao.disponibilidade}</tr>
-            <tr>${solicitacao.descricao}</tr>
+            <tr>${espaco.id_espaco}</tr>
+            <tr>${espaco.nome}</tr>
+            <tr>${espaco.descricao}</tr>
+            <tr>${espaco.endereco}</tr>
+            <tr>${espaco.disponibilidade}</tr>
+            <tr>${espaco.descricao}</tr>
             <tr><a href="#" onclick="window.location.href="/pages/espacos-publicos">Editar</a></tr>
-            <tr><a href="#" onclick="cancelarSolicitacao(${solicitacao.id_solicitacao})">Excluir</a></tr>
+            <tr><a href="#" onclick="cancelarSolicitacao(${espaco.id_espaco})">Excluir</a></tr>
         `;
     });
 }
@@ -55,7 +55,6 @@ async function fetchDataAll() {
 
         const dataEspPub = await response.json();
 
-        console.log(dataEspPub);
         tbEspacoPublicoDashBoard(dataEspPub);
     } catch (error) {
         console.error("Erro ao buscar dados: ", error);

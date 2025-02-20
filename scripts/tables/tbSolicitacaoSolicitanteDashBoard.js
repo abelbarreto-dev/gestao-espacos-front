@@ -49,11 +49,11 @@ function tbSolicitacaoSolicitanteDashBoard(data) {
     });
 }
 
-function fetchDataAll() {
+async function fetchDataAll() {
     try {
-        const response = fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes");
+        const response = await fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes");
 
-        const dataSolicicao = response.json();
+        const dataSolicicao = await response.json();
         tbSolicitacaoAdminDashBoard(dataSolicicao);
     } catch (error) {
         console.error("Erro ao buscar dados: ", error);
