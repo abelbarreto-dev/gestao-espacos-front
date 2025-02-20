@@ -2,8 +2,8 @@ import {
     populateSelectEspacoPublico,
     populateSelectTipoEvento,
     populateSelectSolicitante
-} from './select/populateSelect';
-import UserStore from "./singleton/userStore";
+} from './select/populateSelect.js';
+import UserStore from "./singleton/userStore.js";
 
 function getAllEspacosPublicos() {
     const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos";
@@ -50,6 +50,9 @@ function getAllSolicitantes() {
 
 document.addEventListener("DOMContentLoaded", function () {
     try {
+        if (!UserStore.getInstance().id_usuario) {
+            throw Error("user not found");
+        }
         getAllEspacosPublicos();
         getAllTiposEventos();
         getAllSolicitantes();
