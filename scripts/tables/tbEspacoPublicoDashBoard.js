@@ -53,7 +53,7 @@ async function fetchDataAll() {
     try {
         const response = await fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos");
 
-        const dataEspPub = response.json();
+        const dataEspPub = await response.json();
 
         console.log(dataEspPub);
         tbEspacoPublicoDashBoard(dataEspPub);
