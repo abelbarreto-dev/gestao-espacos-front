@@ -1,4 +1,4 @@
-import { usuarioResponse } from './models/modelsRequest.js';
+import { usuarioResponse } from './models/modelsResponse.js';
 import UserStore from './singleton/userStore.js';
 
 document.addEventListener("DOMContentLoaded", function () {
