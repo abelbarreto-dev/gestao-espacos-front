@@ -1,10 +1,10 @@
-export const autorizacaoResponse = {
+export const autorizacaoRequest = {
     id_solicitacao: 0,
     data_emissao: "date",
     validade: "date"
 };
 
-export const espacoPublicoResponse = {
+export const espacoPublicoRequest = {
     nome: "",
     endereco: "",
     capacidade: 0,
@@ -12,13 +12,13 @@ export const espacoPublicoResponse = {
     descricao: null
 };
 
-export const periodoResponse = {
+export const periodoRequest = {
     id_solicitacao: 0,
     data_inicio: "datetime",
     data_fim: "datetime"
 };
 
-export const solicitacaoResponse = {
+export const solicitacaoRequest = {
     id_solicitante: 0,
     id_usuario: 0,
     id_espaco: 0,
@@ -27,18 +27,18 @@ export const solicitacaoResponse = {
     data_solicitacao: "datetime"
 };
 
-export const solicitanteResponse = {
+export const solicitanteRequest = {
     nome: "",
     tipo: "",
     documento: "",
     contato: ""
 };
 
-export const tipoEventoResponse = {
+export const tipoEventoRequest = {
     descricao: null
 };
 
-export const usuarioResponse = {
+export const usuarioRequest = {
     nome: "",
     email: "",
     senha: "",

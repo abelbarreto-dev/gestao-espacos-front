@@ -1,9 +1,39 @@
+import { periodoRequest } from './models/modelsRequest.js';
 import {
     populateSelectEspacoPublico,
     populateSelectTipoEvento,
     populateSelectSolicitante
 } from './select/populateSelect.js';
 import UserStore from "./singleton/userStore.js";
+
+/** periodo */
+function createNewPeriodo(solicitacaoId) {
+    const dados = periodoRequest(
+        id_solicitacao=solicitacaoId,
+        data_inicio=document.getElementById("PeriodoDataInicioSolicita").value,
+        data_fim=document.getElementById("PeriodoDataFimSolicita").value
+    );
+
+    const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/periodos";
+
+    // Envia os dados para a API
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+    })
+    .then(response => response.json())
+    .then(data => {
+        return true;
+    })
+    .catch(error => {
+        console.error("Erro:", error);
+        return false;
+    });
+}
+/** periodo */
 
 function getAllEspacosPublicos() {
     const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos";
@@ -84,8 +114,16 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            alert("Cadastro realizado com sucesso!");
-            console.log("Sucesso:", data);
+            const idSolicitacao = data.data.id_solicitacao;
+
+            const result = createNewPeriodo(idSolicitacao);
+
+            if (result) {
+                alert("Cadastro realizado com sucesso!");
+                console.log("Sucesso!");
+            } else {
+                alert("Problema com o período!");
+            }
         })
         .catch(error => {
             alert("Erro ao cadastrar. Tente novamente.");
