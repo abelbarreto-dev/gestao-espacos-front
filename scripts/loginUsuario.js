@@ -1,3 +1,6 @@
+import { usuarioResponse } from './models/modelsRequest';
+import UserStore from './singleton/userStore';
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault(); // Evita o envio padrão do formulário
@@ -30,6 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Redireciona após login bem-sucedido
                 if (data.data.perfil === "administrador") {
                     window.location.href = "/pages/admin-dashboard";
+
+                    const user = usuarioResponse(
+                        ...data.data
+                    );
+
+                    UserStore.getInstance().setUser(user);
                 }
                 else if (data.data.perfil === "solicitante") {
                     window.location.href = "/pages/solicitante-dashboard";
