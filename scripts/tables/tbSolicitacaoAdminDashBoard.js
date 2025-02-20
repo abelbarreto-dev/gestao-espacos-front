@@ -1,22 +1,17 @@
 function tbSolicitacaoAdminDashBoard(data) {
     const tableBody = document.getElementById("TbSolicitacaoAdminDashBoard");
-
     tableBody.innerHTML = "";
 
     data.forEach(solicitacao => {
-        const row = document.createElement("tr");
-
-        row.innerHTML = "";
-
-        row.innerHTML = `
-            <tr>${solicitacao.id_solicitacao}</tr>
-            <tr>${solicitacao.id_solicitante}</tr>
-            <tr>${solicitacao.id_usuario}</tr>
-            <tr>${solicitacao.id_espaco}</tr>
-            <tr>${solicitacao.id_tipo_evento}</tr>
-            <tr>${solicitacao.status}</tr>
-            <tr>${solicitacao.data_solicitacao}</tr>
-        `;
+        tableBody.innerHTML += `<tr>
+            <td>${solicitacao.id_solicitacao}</td>
+            <td>${solicitacao.id_solicitante}</td>
+            <td>${solicitacao.id_usuario}</td>
+            <td>${solicitacao.id_espaco}</td>
+            <td>${solicitacao.id_tipo_evento}</td>
+            <td>${solicitacao.status}</td>
+            <td>${solicitacao.data_solicitacao}</td>
+        <tr>`;
     });
 }
 

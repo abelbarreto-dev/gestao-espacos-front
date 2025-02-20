@@ -28,24 +28,19 @@ function cancelarSolicitacao(id) {
 
 function tbSolicitacaoSolicitanteDashBoard(data) {
     const tableBody = document.getElementById("TbSolicitacaoSolicitanteDashBoard");
-
     tableBody.innerHTML = "";
 
     data.forEach(solicitacao => {
-        const row = document.createElement("tr");
-
-        row.innerHTML = "";
-
-        row.innerHTML = `
-            <tr>${solicitacao.id_solicitacao}</tr>
-            <tr>${solicitacao.id_solicitante}</tr>
-            <tr>${solicitacao.id_usuario}</tr>
-            <tr>${solicitacao.id_espaco}</tr>
-            <tr>${solicitacao.id_tipo_evento}</tr>
-            <tr>${solicitacao.status}</tr>
-            <tr>${solicitacao.data_solicitacao}</tr>
-            <tr><a href="#" onclick="cancelarSolicitacao(${solicitacao.id_solicitacao})">Cancelar</a></tr>
-        `;
+        tableBody.innerHTML += `<tr>
+            <td>${solicitacao.id_solicitacao}</td>
+            <td>${solicitacao.id_solicitante}</td>
+            <td>${solicitacao.id_usuario}</td>
+            <td>${solicitacao.id_espaco}</td>
+            <td>${solicitacao.id_tipo_evento}</td>
+            <td>${solicitacao.status}</td>
+            <td>${solicitacao.data_solicitacao}</td>
+            <td><a href="#" onclick="cancelarSolicitacao(${solicitacao.id_solicitacao})">Cancelar</a></td>
+        </tr>`;
     });
 }
 
@@ -54,7 +49,7 @@ async function fetchDataAll() {
         const response = await fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes");
 
         const dataSolicicao = await response.json();
-        tbSolicitacaoAdminDashBoard(dataSolicicao);
+        tbSolicitacaoSolicitanteDashBoard(dataSolicicao.data);
     } catch (error) {
         console.error("Erro ao buscar dados: ", error);
     }
