@@ -31,13 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
-                alert("Senha redefinida com sucesso!");
-                window.location.href = "/pages/login"; // Redireciona para a página de login
-            } else {
-                alert("Erro ao redefinir senha. Verifique as informações fornecidas.");
-            }
-            console.log("Sucesso:", data);
+            alert("Senha redefinida com sucesso!");
+            window.location.href = "/pages/login"; // Redireciona para a página de login
+            console.log("Sucesso");
         })
         .catch(error => {
             alert("Erro ao processar a recuperação de senha. Tente novamente.");
