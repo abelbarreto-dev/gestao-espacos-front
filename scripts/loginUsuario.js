@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
+            console.log(data.status)
             if (data.status === "success") {
                 alert("Login realizado com sucesso!");
 
