@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Envia os dados para a API de recuperação de senha
         fetch(url, {
-            method: "POST",
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
