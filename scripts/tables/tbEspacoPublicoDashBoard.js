@@ -29,6 +29,8 @@ function cancelarSolicitacao(id) {
 function tbEspacoPublicoDashBoard(data) {
     const tableBody = document.getElementById("TbEspacoPublicoDashBoard");
 
+    console.log(data);
+
     data.forEach(espaco => {
         tableBody.innerHTML = `<tr>
             <td>${espaco.id_espaco}</td>
