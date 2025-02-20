@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const dados = {
             id_solicitante: parseInt(document.getElementById("SelectSolicitante").value),
             id_usuario: UserStore.getInstance().id_usuario,
-            id_espaco: parseInt(document.getElementById("SelectEpacoPublico").value),
+            id_espaco: parseInt(document.getElementById("SelectEspacoPublico").value),
             id_tipo_evento: parseInt(document.getElementById("SelectTipoEvento").value),
         };
 
