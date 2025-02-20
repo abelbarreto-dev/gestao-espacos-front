@@ -54,7 +54,7 @@ function fetchDataAll() {
         const response = fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes");
 
         const dataSolicicao = response.json();
-        tbSolicitacaoAdminDashBoard(dataSolicicao)
+        tbSolicitacaoAdminDashBoard(dataSolicicao);
     } catch (error) {
         console.error("Erro ao buscar dados: ", error);
     }

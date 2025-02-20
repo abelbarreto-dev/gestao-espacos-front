@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             alert("Cadastro atualizado com sucesso!");
             console.log("Sucesso:", data);
+
+            window.location.href = "/pages/espacos-publicos";
         })
         .catch(error => {
             alert("Erro ao atualizar. Tente novamente.");

@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             alert("Cadastro realizado com sucesso!");
             console.log("Sucesso:", data);
+
+            window.location.href = "/pages/espacos-publicos";
         })
         .catch(error => {
             alert("Erro ao cadastrar. Tente novamente.");
