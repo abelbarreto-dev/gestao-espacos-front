@@ -1,4 +1,4 @@
-export function tbSolicitacaoAdminDashBoard(data) {
+function tbSolicitacaoAdminDashBoard(data) {
     const tableBody = document.getElementById("TbSolicitacaoAdminDashBoard");
 
     tableBody.innerHTML = "";
@@ -17,3 +17,38 @@ export function tbSolicitacaoAdminDashBoard(data) {
         `;
     });
 }
+
+function setTotalEspPub(espPubLen) {
+    document.getElementById("AdminTotalEspacosPublicos").textContent = espPubLen;
+}
+
+function setTotalSolicitAprovadas() {
+    try {
+        const solictAprovadas = fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes/status/aprovado");
+        const totalSolicitAprovadas = solictAprovadas.length;
+    
+        document.getElementById("AdminTotalSolicitacoesAprovadas").textContent = totalSolicitAprovadas;
+    } catch (error) {
+        document.getElementById("AdminTotalSolicitacoesAprovadas").textContent = 0;
+    }
+}
+
+function fetchData() {
+    try {
+        const response = fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes");
+
+        const espPub = fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos");
+
+        const dataSolicicao = response.json();
+        tbSolicitacaoAdminDashBoard(dataSolicicao)
+
+        const totalEspPub = espPub.length;
+
+        setTotalEspPub(totalEspPub);
+        setTotalSolicitAprovadas();
+    } catch (error) {
+        console.error("Erro ao buscar dados: ", error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fetchData);
