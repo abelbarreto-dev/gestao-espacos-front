@@ -54,6 +54,8 @@ async function fetchDataAll() {
         const response = await fetch("https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/espacos-publicos");
 
         const dataEspPub = response.json();
+
+        console.log(dataEspPub);
         tbEspacoPublicoDashBoard(dataEspPub);
     } catch (error) {
         console.error("Erro ao buscar dados: ", error);
