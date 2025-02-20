@@ -30,7 +30,11 @@ function tbEspacoPublicoDashBoard(data) {
     const tableBody = document.getElementById("TbEspacoPublicoDashBoard");
     tableBody.innerHTML = "";
 
-    console.log(data);
+    if (tableBody) {
+        tableBody.innerHTML = "";
+    } else {
+        console.error("Tabela não encontrada!");
+    }
 
     data.forEach(espaco => {
         tableBody.innerHTML += `<tr>
