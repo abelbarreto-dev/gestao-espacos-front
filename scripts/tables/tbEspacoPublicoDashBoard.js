@@ -28,11 +28,12 @@ function cancelarSolicitacao(id) {
 
 function tbEspacoPublicoDashBoard(data) {
     const tableBody = document.getElementById("TbEspacoPublicoDashBoard");
+    tableBody.innerHTML = "";
 
     data.forEach(espaco => {
         const row = document.createElement("tr");
 
-        row.innerHTML = `<tr>
+        row.innerHTML = `
             <td>${espaco.id_espaco}</td>
             <td>${espaco.nome}</td>
             <td>${espaco.descricao}</td>
@@ -41,7 +42,7 @@ function tbEspacoPublicoDashBoard(data) {
             <td>${espaco.descricao}</td>
             <td><a href="#" onclick="window.location.href='/pages/espacos-publicos'">Editar</a></td>
             <td><a href="#" onclick="cancelarSolicitacao(${espaco.id_espaco})">Excluir</a></td>
-        </tr>`;
+        `;
     });
 }
 
