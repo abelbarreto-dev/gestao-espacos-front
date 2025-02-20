@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 else if (data.perfil === "solicitante") {
                     window.location.href = "/pages/solicitante-dashboard";
                 } else {
-                    console.log("testando else");
+                    console.log("testando else : ", data.perfil);
                 }
             } else {
                 alert("Erro no login. Verifique suas credenciais.");
