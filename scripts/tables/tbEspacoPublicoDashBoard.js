@@ -29,19 +29,19 @@ function cancelarSolicitacao(id) {
 function tbEspacoPublicoDashBoard(data) {
     const tableBody = document.getElementById("TbEspacoPublicoDashBoard");
 
-    data.forEach(espaco => {
+    data.foreach(espaco => {
         const row = document.createElement("tr");
 
-        row.innerHTML = `
-            <tr>${espaco.id_espaco}</tr>
-            <tr>${espaco.nome}</tr>
-            <tr>${espaco.descricao}</tr>
-            <tr>${espaco.endereco}</tr>
-            <tr>${espaco.disponibilidade}</tr>
-            <tr>${espaco.descricao}</tr>
-            <tr><a href="#" onclick="window.location.href="/pages/espacos-publicos">Editar</a></tr>
-            <tr><a href="#" onclick="cancelarSolicitacao(${espaco.id_espaco})">Excluir</a></tr>
-        `;
+        row.innerHTML = `<tr>
+            <td>${espaco.id_espaco}</td>
+            <td>${espaco.nome}</td>
+            <td>${espaco.descricao}</td>
+            <td>${espaco.endereco}</td>
+            <td>${espaco.disponibilidade}</td>
+            <td>${espaco.descricao}</td>
+            <td><a href="#" onclick="window.location.href='/pages/espacos-publicos'">Editar</a></td>
+            <td><a href="#" onclick="cancelarSolicitacao(${espaco.id_espaco})">Excluir</a></td>
+        </tr>`;
     });
 }
 
