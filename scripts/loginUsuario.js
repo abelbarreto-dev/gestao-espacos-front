@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data.status)
             if (data.status === "success") {
                 alert("Login realizado com sucesso!");
 
@@ -34,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 else if (data.perfil === "solicitante") {
                     window.location.href = "/pages/solicitante-dashboard";
+                } else {
+                    console.log("testando else");
                 }
             } else {
                 alert("Erro no login. Verifique suas credenciais.");
