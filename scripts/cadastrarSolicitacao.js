@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
             id_usuario: UserStore.getInstance().id_usuario,
             id_espaco: parseInt(document.getElementById("SelectEspacoPublico").value),
             id_tipo_evento: parseInt(document.getElementById("SelectTipoEvento").value),
+            status: "pending",
+            data_modificacao: null
         };
 
         const url = "https://gestao-espacos-api.fly.dev/api/v1/gestao-espacos/solicitacoes";
